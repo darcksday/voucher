@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+    min-height: 100%;
+    background: #efefef url("assets/background.jpeg") fixed;
+}
+
+.counter {
+    display: block;
+    margin: auto;
+    font-size: 38px;
+    height: 88px;
+    line-height: 82px;
+    width: 88px;
+    border: 2px solid #f8d14b;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    font-weight: 500;
+    background: #f6e195;
+    color: #eb9334;
+}
+
+footer {
+    position: relative !important;
+    margin-top: 30px;
+}
+
+.input-group-append button {
+    border-radius: 0 5px 5px 0;
+}
+
+.small-button {
+    width: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity ease .3s;
+}
+
+.username {
+    margin-right: 20px;
+}
+
+.small-button:hover {
+    opacity: 1;
+    transition: opacity ease .3s;
+}
+
+.remove-voucher {
+    float: right;
+}
+
+.one-voucher.is-used canvas, .one-voucher.is-expired canvas {
+    opacity: .5;
+}
+
+.one-voucher.is-used .black-bg, .one-voucher.is-expired .black-bg {
+    background: #555;
+}
+
+.no-vouchers {
+    width: 50%;
+    margin: auto;
+    min-width: 450px;
+}
+
+.vouchers {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%;
+}
+
+.vouchers canvas {
+    max-width: 100%;
+    object-fit: contain;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.form-check-label {
+    color: #555;
+}
+
+.one-voucher {
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    page-break-inside: avoid;
+}
+
+.one-voucher .voucher-inner {
+    display: grid;
+    grid-template-columns: 60% 1% 4% auto;
+}
+
+.one-voucher .canvas, .one-voucher .black-bg {
+    padding: 20px;
+}
+
+.one-voucher .black-bg {
+    background: #222;
+    color: #FFF;
+    border-radius: 0 28px 28px 0;
+    position: relative;
+    z-index: 0;
+}
+
+.one-voucher .gift-shadow {
+    background: rgba(90, 90, 90, 0.1);
+}
+
+.one-voucher .additional-border {
+    border: 2px solid #ffd213;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    bottom: 7px;
+    right: 7px;
+    border-radius: 24px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.one-voucher .gift-vertical {
+    background: #ffd213;
+    position: relative;
+}
+
+.one-voucher .gift-vertical img {
+    position: absolute;
+    width: 110px;
+    left: -41px;
+    top: 60%;
+    z-index: 2;
+}
+
+.one-voucher .gift-vertical:after {
+    background: url("assets/bn-2.svg") no-repeat;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 75px;
+    top: 60%;
+    position: absolute;
+    z-index: 0;
+}
+
+
+.one-voucher .used-label {
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+}
+
+span.is-used {
+    text-decoration: line-through;
+}
+
+.one-voucher .copy {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 22px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all ease .2s;
+}
+
+.one-voucher .copy:hover {
+    opacity: 0.9;
+}
+
+.one-voucher .copy:active {
+    color: #ffd213;
+}
+
+.one-voucher .near-amount {
+    margin-top: 20%;
+}
+
+.one-voucher .copy img {
+    width: 20px;
+    margin-right: 3px;
+    vertical-align: text-top;
+}
+
+/* Add voucher */
+.one-voucher form {
+    padding: 32px 22px;
+}
+
+select.custom-select {
+    padding: 5px 10px;
+    border-color: #CCC;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    outline: none;
+    height: 36px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.input-counter {
+    width: 40px;
+    text-align: center;
+    font-size: 22px;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.pay-voucher {
+    width: 420px;
+    margin: auto;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.print-btn {
+    right: 14px;
+    padding: 8px 12px;
+}
+
+@media all and (max-width: 1200px) {
+    .one-voucher .gift-vertical img, .one-voucher .gift-vertical:after {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    main {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .vouchers {
+        display: block;
+    }
+
+    .one-voucher {
+        margin-bottom: 50px;
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin-top: 2cm;
+    }
+
+    html, body {
+        margin: 0;
+        color: #000;
+        background: #fff;
+    }
+
+    button, .print-btn, header, .page-title, .remove-voucher, .copy, .is-used, .add-voucher-form {
+        display: none;
+    }
+
+    .one-voucher {
+        margin: 1.5cm 0 0 0;
+    }
+}
+
+.landing-top {
+    display: grid;
+    grid-template-columns: 45% auto;
+    grid-gap: 5%;
+    font-size: 17px;
+}
+
+.landing-top img {
+    max-width: 100%;
+}
+
+.btn {
+    padding: 8px 28px !important;
+}
+
+.sample-image {
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background: #efefef;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    border-top: 1px dashed #CCC;
+    padding-top: 10px;
+}
+
+@media all and (max-width: 640px) {
+    .landing-top {
+        display: block;
+    }
+}
