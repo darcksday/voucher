@@ -2,10 +2,9 @@
   "name": "web3-app",
   "private": true,
   "version": "0.0.0",
-
   "scripts": {
     "dev": "vite",
-    "build": "vite build &&  npx hardhat run smart_contract/scripts/deploy.js --network mumbai",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
