@@ -2,6 +2,8 @@ import { useContext, useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import { RequestContext } from '../context/RequestContext';
 import { formatAmount, dateFormat, isExpired, isEmptyAddress } from '/src/utilits/voucher';
+import successImg from '../assets/success.png'
+import loaderGif from '../assets/loader.gif'
 
 export const Claim = () => {
 
@@ -98,7 +100,7 @@ export const Claim = () => {
           <div className="row text-center mt-3 success-payment">
             <div className="col" />
             <div className="col col-lg-5 col-md-6">
-              <img src="/src/assets/success.png" alt="success" width="60" />
+              <img src={successImg} alt="success" width="60" />
               <p className="mt-3">
                 <b>You received
                   {(!isEmptyAddress(voucher.token_contract)) ? ` ${formatAmount(voucher.amount, 6)} USDC`
@@ -119,7 +121,7 @@ export const Claim = () => {
 
         {(isPaymentLoader) && (<div className="text-center">
           <p>Processing payment...</p>
-          <img src="/src/assets/loader.gif" alt="" width="70" />
+          <img src={loaderGif} alt="" width="70" />
         </div>)}
 
       </div>

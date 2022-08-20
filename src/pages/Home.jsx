@@ -2,6 +2,10 @@ import { useContext, useState, useEffect, useRef } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Context } from '../context/Web3Context';
+import logo from '../assets/logo.png'
+import sampleImg from '../assets/sample.png'
+import unlock1 from '../assets/unlock1.png'
+import unlock2 from '../assets/unlock2.png'
 
 
 export const Home = () => {
@@ -18,13 +22,13 @@ export const Home = () => {
   return (
     <main className="container">
       <div className="text-center mt-lg-5 mb-lg-2 mt-2">
-        <img src="/src/assets/logo.png" alt="logo" width="200" />
+        <img src={logo} alt="logo" width="200" />
       </div>
       <h2 className="mb-lg-5 mb-3 text-center">
         Polygon Payment Vouchers
       </h2>
       <div className="landing-top">
-        <img src="src/assets/sample.png" alt="sample" className="sample-image" />
+        <img src={sampleImg} alt="sample" className="sample-image" />
         <div>
           <p className="mt-2 pt-3">
             <b>Extend the finance management with POLYGON Payment Vouchers!</b>
@@ -64,7 +68,7 @@ export const Home = () => {
       <h3 className="text-center mt-5 mb-4">Payment Options</h3>
       <div className="row">
         <div className="col-6 text-right">
-          <img src="src/assets/unlock1.png" alt="" className="sample-image" width="60%" />
+          <img src={unlock1} alt="" className="sample-image" width="60%" />
         </div>
         <div className="col-6">
           <h5 className="mt-2">MATIC</h5>
@@ -79,7 +83,7 @@ export const Home = () => {
 
       <div className="row mt-4">
         <div className="col-6 text-right">
-          <img src="src/assets/unlock2.png" alt="" className="sample-image" width="60%" />
+          <img src={unlock2} alt="" className="sample-image" width="60%" />
         </div>
         <div className="col-6">
           <h5 className="pt-4">USDC</h5>

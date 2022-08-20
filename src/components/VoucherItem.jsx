@@ -3,6 +3,9 @@ import { useNavigate, generatePath } from 'react-router-dom';
 import { useEffect } from 'react';
 import { ethers } from 'ethers';
 import { formatAmount, dateFormat, isExpired, isEmptyAddress, shortAddress } from '/src/utilits/voucher';
+import bn1 from '../assets/bn-1.svg'
+import deleteImg from '../assets/delete.png'
+import copyImg from '../assets/copy.png'
 
 export const VoucherItem = ({ voucher, index, removeVoucher }) => {
     let url;
@@ -29,12 +32,12 @@ export const VoucherItem = ({ voucher, index, removeVoucher }) => {
         </div>
         <div className="gift-shadow" />
         <div className="gift-vertical">
-          <img src="src/assets/bn-1.svg" alt="" />
+          <img src={bn1} alt="" />
         </div>
         <div className="black-bg">
           <img
             onClick={e => removeVoucher(voucher.id)}
-            src="src/assets/delete.png"
+            src={deleteImg}
             alt="remove"
             title="remove"
             className="small-button remove-voucher" />
@@ -75,7 +78,7 @@ export const VoucherItem = ({ voucher, index, removeVoucher }) => {
             )}
           </h4>
           <div className="copy" onClick={e => copyURL()}>
-            <img src="src/assets/copy.png" alt="copy" title="copy" />
+            <img src={copyImg} alt="copy" title="copy" />
           </div>
         </div>
       </div>

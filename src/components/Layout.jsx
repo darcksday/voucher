@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core';
 import { shortAddress } from '/src/utilits/voucher';
 import { useNavigate, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.png'
 
 export const Layout = () => {
   const { active, account, activate, deactivate, chainId } = useWeb3React();
@@ -21,7 +22,7 @@ export const Layout = () => {
 
         <div className="container-lg d-flex justify-content-between">
           <Link to={'/'}>
-            <img src="/src/assets/logo.png" width="150" alt="logos" />
+            <img src={logo} width="150" alt="logos" />
           </Link>
           <div>
             <span className="username fw-bold text-black-50 pt-1">{shortAddress(account)}</span>

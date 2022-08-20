@@ -2,6 +2,8 @@ import { useContext, useState, useEffect, useRef } from 'react'
 import { VoucherItem } from '../components/VoucherItem';
 import { VoucherForm } from '../components/VoucherForm';
 import { RequestContext } from '../context/RequestContext';
+import printImg from '../assets/print.svg'
+import loader from '../assets/loader.gif'
 
 
 export const Vouchers = () => {
@@ -56,10 +58,10 @@ export const Vouchers = () => {
   }
 
   useEffect(() => {
-      if (!localStorage.getItem('app-private-keys')) {
-        localStorage.setItem('app-private-keys', JSON.stringify({}));
-      }
-      getVouchers();
+    if (!localStorage.getItem('app-private-keys')) {
+      localStorage.setItem('app-private-keys', JSON.stringify({}));
+    }
+    getVouchers();
 
   }, [])
 
@@ -68,7 +70,7 @@ export const Vouchers = () => {
     <main>
       <div className="container-lg position-relative">
         <button className="position-absolute rounded-circle border border-secondary print-btn" onClick={e => print()}>
-          <img src="src/assets/print.svg" width="18" alt="" />
+          <img src={printImg} width="18" alt="" />
         </button>
         <h2 className="text-center mb-5 page-title">My Payment Vouchers</h2>
         {(isReady) && (
@@ -90,7 +92,7 @@ export const Vouchers = () => {
         )}
         {(!isReady) && (
           <div className="text-center">
-            <img src="src/assets/loader.gif" alt="" width="70" />
+            <img src={loader} alt="" width="70" />
           </div>)}
 
 
