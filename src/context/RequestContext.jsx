@@ -15,7 +15,6 @@ export const RequestProvider = ({ children }) => {
   const [contract, setContract] = useState();
 
   const addVoucher = async (voucher) => {
-    console.log(contract);
     let amountWei = ethers.utils.parseEther(voucher.amount);
     const gas = await contract.estimateGas.addVoucher(voucher.id, voucher.hash, voucher.expire_date, {
       value: amountWei._hex

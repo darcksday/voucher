@@ -7,17 +7,6 @@ import { InjectedConnector } from '@web3-react/injected-connector';
 export const Web3Context = React.createContext();
 export const SignInProvider = ({ children }) => {
   const [CHAIN_ID, CHAIN_NAME, RPC_URL, EXPLORER_URL, TOKEN_SYMBOL, TOKEN_DECIMALS] = [import.meta.env.V_CHAIN_ID, import.meta.env.V_CHAIN_NAME, import.meta.env.V_RPC_URL, import.meta.env.V_EXPLORER_URL, import.meta.env.V_TOKEN_SYMBOL, import.meta.env.V_TOKEN_DECIMALS];
-  console.log([
-    {
-      chainId: CHAIN_ID,
-      chainName: CHAIN_NAME,
-      rpcUrls: RPC_URL.split(','),
-      blockExplorerUrls: [EXPLORER_URL],
-      nativeCurrency: {
-        symbol: TOKEN_SYMBOL,
-        decimals: parseInt(TOKEN_DECIMALS)
-      }
-    }]);
   const getLibrary = (provider) => {
     const library = new ethers.providers.Web3Provider(provider);
     library.pollingInterval = 5000;
@@ -60,7 +49,7 @@ export const SignInProvider = ({ children }) => {
     try {
       await window.ethereum.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ CHAIN_ID }],
+        params: [{ chainId: CHAIN_ID }],
       });
     } catch (switchError) {
       if (switchError.code === 4902) {

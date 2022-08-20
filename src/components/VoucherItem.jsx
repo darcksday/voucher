@@ -5,7 +5,6 @@ import { ethers } from 'ethers';
 import { formatAmount, dateFormat, isExpired, isEmptyAddress, shortAddress } from '/src/utilits/voucher';
 
 export const VoucherItem = ({ voucher, index, removeVoucher }) => {
-  console.log(voucher);
     let url;
   const generateUrl = () => {
     let keys = JSON.parse(localStorage.getItem('app-private-keys'));

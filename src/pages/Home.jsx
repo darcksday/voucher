@@ -44,7 +44,7 @@ export const Home = () => {
           <div className="row">
             <div className="col-4">
               <div className="counter">1</div>
-              <p className="fw-bolder mb-1">Login using your <a href="https://wallet.near.org/" className="text-black" target="_blank">NEAR Wallet</a>.</p>
+              <p className="fw-bolder mb-1">Login using your <a href="https://metamask.io/" className="text-black" target="_blank">Metamask Wallet</a>.</p>
               <div>Polygon Blockchain - scalable and fast solution with low transaction fees without ever sacrificing on security.</div>
             </div>
             <div className="col-4">

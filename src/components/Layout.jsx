@@ -12,7 +12,6 @@ export const Layout = () => {
     e.preventDefault();
     deactivate();
     navigate('/');
-    console.log(123)
   }
 
 

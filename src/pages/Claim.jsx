@@ -39,7 +39,6 @@ export const Claim = () => {
     if (id) {
       getById(id).then((result) => {
         setVoucher(result);
-        console.log(result);
 
       })
     }
