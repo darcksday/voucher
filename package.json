@@ -5,7 +5,7 @@
 
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npx hardhat run npx hardhat run smart_contract/scripts/deploy.js --network mumbai",
+    "build": "vite build &&  npx hardhat run smart_contract/scripts/deploy.js --network mumbai",
     "preview": "vite preview"
   },
   "dependencies": {
