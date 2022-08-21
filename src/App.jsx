@@ -10,6 +10,10 @@ import { Web3Context } from './context/Web3Context';
 import { RequestContext } from './context/RequestContext';
 
 const App = () => {
+  let url = document.location.pathname.split('/ipfs');
+  url = url[1].split('/');
+  url = '/ipfs/' + url[1];
+  console.log(url)
   const { active, account, activate, deactivate, chainId } = useWeb3React();
   const { contract } = useContext(RequestContext);
   const { connectWeb3Wallets, isMetamaskInstalled } = useContext(Web3Context);
@@ -36,7 +40,7 @@ const App = () => {
 
 
   return (
-    <BrowserRouter basename={process.env.BASE_URL}>
+    <BrowserRouter basename={url}>
       <Routes>
         <Route index element={<Home />} />
         <Route element={<PrivatePage />}>
