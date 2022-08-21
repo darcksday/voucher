@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "parcel:build": "parcel build src/index.html --public-url ./",
-    "start": "NODE_ENV=local parcel src/index.html",
+    "start": "parcel src/index.html",
     "build": "NODE_ENV=prod npm run parcel:build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
