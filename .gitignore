@@ -30,6 +30,7 @@ dist-ssr
 *.sw?
 
 .env
+.env.prod
 coverage
 coverage.json
 typechain

@@ -5,7 +5,7 @@
   "scripts": {
     "parcel:build": "parcel build src/index.html --public-url ./",
     "start": "NODE_ENV=local parcel src/index.html",
-    "build": "npm run parcel:build",
+    "build": "NODE_ENV=prod npm run parcel:build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "cleanup": "rm -rf ./dist && rm -rf .parcel-cache"
