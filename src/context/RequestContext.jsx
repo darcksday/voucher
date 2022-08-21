@@ -7,7 +7,8 @@ import ERC20ContractAbi from '@openzeppelin/contracts/build/contracts/ERC20.json
 import { useWeb3React } from '@web3-react/core';
 
 export const RequestContext = React.createContext();
-const [USDC_CONTRACT] = [import.meta.env.V_USDC_CONTRACT];
+console.log(123)
+const [USDC_CONTRACT] = [process.env.USDC_CONTRACT];
 
 
 export const RequestProvider = ({ children }) => {

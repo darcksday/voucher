@@ -24,8 +24,8 @@ module.exports = {
     localhost: {},
 
     mumbai: {
-      url: process.env.V_MUMBAI_RPC,
-      accounts: [process.env.V_PRIVATE_KEY],
+      url: process.env.MUMBAI_RPC,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
 
