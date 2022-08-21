@@ -36,7 +36,7 @@ const App = () => {
 
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ipfs/QmW2dXjEyxa1ufyoxM2KbVfTp52CmnPfmtp1rP79wTkmPH/">
       <Routes>
         <Route index element={<Home />} />
         <Route element={<PrivatePage />}>
