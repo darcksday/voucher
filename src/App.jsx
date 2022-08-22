@@ -13,7 +13,7 @@ const App = () => {
   let url = document.location.pathname.split('/ipfs');
   url = url[1].split('/');
   url = '/ipfs/' + url[1];
-  console.log(url)
+  url = (process.env.BASE_URL) ? process.env.BASE_UR : url;
   const { active, account, activate, deactivate, chainId } = useWeb3React();
   const { contract } = useContext(RequestContext);
   const { connectWeb3Wallets, isMetamaskInstalled } = useContext(Web3Context);
