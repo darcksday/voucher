@@ -13,13 +13,15 @@ const App = () => {
   let url = document.location.pathname.split('/ipfs');
   url = url[1].split('/');
   url = '/ipfs/' + url[1];
-  url = (process.env.BASE_URL) ? process.env.BASE_UR : url;
+  url = (process.env.BASE_URL) ? process.env.BASE_URL : url;
+  console.log(url);
+  console.log(process.env.BASE_URL);
   const { active, account, activate, deactivate, chainId } = useWeb3React();
   const { contract } = useContext(RequestContext);
   const { connectWeb3Wallets, isMetamaskInstalled } = useContext(Web3Context);
   const [tryConnect, setTryConnect] = useState(false);
 
-
+  console.log(url);
   const PrivatePage = () => {
 
     if (!isMetamaskInstalled()) {
