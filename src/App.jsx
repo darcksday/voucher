@@ -15,7 +15,7 @@ const App = () => {
   url = '/ipfs/' + url[1];
   console.log(url);
 
-  url = (process.env.BASE_URL) ? process.env.BASE_URL : url;
+  // url = (process.env.BASE_URL) ? process.env.BASE_URL : url;
   console.log(process.env.BASE_URL);
   const { active, account, activate, deactivate, chainId } = useWeb3React();
   const { contract } = useContext(RequestContext);
