@@ -27,6 +27,10 @@ Step 3: Deploy contract to Mumbai Testnet
 -------------------------------------
 `yarn deploy:mumbai` or `npm deploy:mumbai`
 
+Step 4: Run frontend locally
+-------------------------------------
+`yarn start` or `npm start`
+
 As you can see in `package.json`, this does two things:
 
 1. builds & deploys smart contract to Mumbai TestNet
