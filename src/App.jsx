@@ -12,13 +12,11 @@ import { RequestContext } from './context/RequestContext';
 const App = () => {
 
   // url = (process.env.BASE_URL) ? process.env.BASE_URL : url;
-  console.log(process.env.BASE_URL);
   const { active, account, activate, deactivate, chainId } = useWeb3React();
   const { contract } = useContext(RequestContext);
   const { connectWeb3Wallets, isMetamaskInstalled } = useContext(Web3Context);
   const [tryConnect, setTryConnect] = useState(false);
 
-  console.log(url);
   const PrivatePage = () => {
 
     if (!isMetamaskInstalled()) {
