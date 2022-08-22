@@ -7,7 +7,6 @@ import { InjectedConnector } from '@web3-react/injected-connector';
 export const Web3Context = React.createContext();
 export const SignInProvider = ({ children }) => {
   const [CHAIN_ID, CHAIN_NAME, RPC_URL, EXPLORER_URL, TOKEN_SYMBOL, TOKEN_DECIMALS] = [process.env.CHAIN_ID, process.env.CHAIN_NAME, process.env.RPC_URL, process.env.EXPLORER_URL, process.env.TOKEN_SYMBOL, process.env.TOKEN_DECIMALS];
-  console.log([CHAIN_ID, CHAIN_NAME, RPC_URL, EXPLORER_URL, TOKEN_SYMBOL, TOKEN_DECIMALS]);
   const getLibrary = (provider) => {
     const library = new ethers.providers.Web3Provider(provider);
     library.pollingInterval = 5000;
