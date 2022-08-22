@@ -10,10 +10,6 @@ import { Web3Context } from './context/Web3Context';
 import { RequestContext } from './context/RequestContext';
 
 const App = () => {
-  let url = document.location.pathname.split('/ipfs');
-  url = url[1].split('/');
-  url = '/ipfs/' + url[1];
-  console.log(url);
 
   // url = (process.env.BASE_URL) ? process.env.BASE_URL : url;
   console.log(process.env.BASE_URL);
@@ -43,7 +39,7 @@ const App = () => {
 
 
   return (
-    <BrowserRouter basename={url}>
+    <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
         <Route element={<PrivatePage />}>
